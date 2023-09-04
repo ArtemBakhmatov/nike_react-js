@@ -1,4 +1,8 @@
 import { 
+    shoe4,
+    shoe5,
+    shoe6,
+    shoe7,
     bigShoe1, 
     bigShoe2, 
     bigShoe3, 
@@ -32,5 +36,28 @@ export const shoes = [
     {
         thumbnail: thumbnailShoe3,
         bigShoe: bigShoe3,
+    },
+];
+
+export const products = [
+    {
+        imgURL: shoe4,
+        name: "Nike Air Jordan-01",
+        price: "$200.20",
+    },
+    {
+        imgURL: shoe5,
+        name: "Nike Air Jordan-10",
+        price: "$210.20",
+    },
+    {
+        imgURL: shoe6,
+        name: "Nike Air Jordan-100",
+        price: "$220.20",
+    },
+    {
+        imgURL: shoe7,
+        name: "Nike Air Jordan-001",
+        price: "$230.20",
     },
 ];
