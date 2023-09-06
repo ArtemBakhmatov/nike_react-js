@@ -6,7 +6,15 @@ import { hamburgerBlack, hamburgerWhite } from '../assets/icons';
 import ButtonThemeColor from './ButtonThemeColor';
 
 const Nav = () => {
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState(null);
+
+    useEffect(() =>{
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    }, []);
 
     useEffect(() =>{
         if (theme === 'dark') {
@@ -17,7 +25,7 @@ const Nav = () => {
     }, [theme]);
 
     const handleThemeColor = () => {
-        setTheme(theme === 'dark' ? 'liht' : 'dark');
+        setTheme(theme === 'dark' ? 'light' : 'dark');
     }
     return (
         <header className='padding-x py-8 absolute z-10 w-full'>
