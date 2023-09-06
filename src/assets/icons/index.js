@@ -3,13 +3,16 @@ import chevronLeft from './chevron-left.svg'
 import cheveronRight from './chevron-right.svg'
 import copyrightSign from './copyright-sign.svg'
 import facebook from './facebook.svg'
-import hamburger from './hamburger.svg'
+import hamburgerBlack from './hamburgerBlack.svg'
+import hamburgerWhite from './hamburgerWhite.svg'
 import instagram from './instagram.svg'
 import support from './support.svg'
 import shieldTick from './shield-tick.svg'
 import star from './star.svg'
 import truckFast from './truck-fast.svg'
 import twitter from './twitter.svg'
+import sun from './sun.svg'
+import moon from './moon.svg'
 
 export {
     arrowRight,
@@ -17,11 +20,14 @@ export {
     chevronLeft,
     copyrightSign,
     facebook,
-    hamburger,
+    hamburgerWhite,
+    hamburgerBlack,
     instagram,
     support,
     shieldTick,
     star,
     truckFast,
-    twitter
+    twitter,
+    sun,
+    moon
 }

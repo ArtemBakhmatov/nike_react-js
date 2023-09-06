@@ -12,6 +12,13 @@
 	scroll-behavior: smooth;
 }
 
+.dark::-webkit-scrollbar {
+	background-color: rgb(24 24 27);
+}
+.dark::-webkit-scrollbar-thumb {
+	background-color: rgb(113 113 122);
+}
+
 @layer components {
 	.max-container {
 		max-width: 1440px;

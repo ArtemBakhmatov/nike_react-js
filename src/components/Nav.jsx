@@ -1,9 +1,24 @@
+import { useState, useEffect } from 'react';
 import { navLinks } from '../constants';
 
 import { headerLogo } from '../assets/images';
-import { hamburger } from '../assets/icons';
+import { hamburgerBlack, hamburgerWhite } from '../assets/icons';
+import ButtonThemeColor from './ButtonThemeColor';
 
 const Nav = () => {
+    const [theme, setTheme] = useState('light');
+
+    useEffect(() =>{
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    }, [theme]);
+
+    const handleThemeColor = () => {
+        setTheme(theme === 'dark' ? 'liht' : 'dark');
+    }
     return (
         <header className='padding-x py-8 absolute z-10 w-full'>
             <nav className='flex justify-between items-center max-container'>
@@ -20,14 +35,20 @@ const Nav = () => {
                         <li key={ item.label }>
                             <a 
                                 href={ item.href }
-                                className='font-montserrat leading-normal text-lg text-slate-gray '
+                                className='font-montserrat leading-normal text-lg text-slate-gray dark:text-slate-100'
                             >{ item.label }</a>
                         </li>
                     )}
+                    <li>
+                        <ButtonThemeColor 
+                            handleThemeColor={ handleThemeColor } 
+                            theme={ theme }
+                        />
+                    </li>
                 </ul>
                 <div className='hidden max-lg:block'>
                     <img 
-                        src={ hamburger } 
+                        src={ theme === 'dark' ? hamburgerWhite : hamburgerBlack } 
                         alt="Hamburger" 
                         width={ 25 }
                         height={ 25 }
