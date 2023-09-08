@@ -18,6 +18,9 @@
 .dark::-webkit-scrollbar-thumb {
 	background-color: rgb(113 113 122);
 }
+.fade{animation-name: fade;animation-duration: 1s;}
+@keyframes fade {from{opacity: 0.1;}to{opacity: 1;}}
+
 
 @layer components {
 	.max-container {
@@ -61,5 +64,16 @@
 
 	.info-text {
 		@apply font-montserrat text-slate-gray text-lg leading-7;
+	}
+	.nav-menu {
+		@apply max-lg:h-full max-lg:fixed max-lg:top-0 max-lg:left-[-100%] max-lg:w-full max-lg:flex-col max-lg:bg-slate-900/90 max-lg:z-20
+	}
+
+	.nav-menu-active {
+		@apply max-lg:left-[0]
+	}
+
+	.close {
+		@apply text-[40px] text-white relative z-30 cursor-pointer
 	}
 }
